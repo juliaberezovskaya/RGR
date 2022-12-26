@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/insertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/insertText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/RemoveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/deleteTExt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/insertBtn" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="372dp"
+        android:layout_height="398dp"
+        app:layout_constraintBottom_toTopOf="@+id/insertByIdBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="152dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonDouble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Double" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PolarVector" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/insertByIdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/insertById"
+        app:layout_constraintBottom_toTopOf="@+id/deleteByIdBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/addEditText"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="356dp"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="1"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/RemoveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/deleteByIdBtn"
+        android:layout_width="162dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/deleteById"
+        app:layout_constraintBottom_toTopOf="@+id/RemoveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/deleteEditText"
+        android:layout_width="61dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="356dp"
+        android:layout_marginBottom="28dp"
+        android:layout_weight="1"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/RemoveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
